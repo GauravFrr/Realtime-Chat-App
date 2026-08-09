@@ -30,13 +30,16 @@ const ChatWindow = ({ username, onDisconnect }) => {
 
     fetchHistory();
 
-    // 2. Connect socket and register username
+    // 2. Connect socket
     socket.connect();
-    socket.emit('join', username);
+    if (socket.connected) {
+      socket.emit('join', username);
+    }
 
     // 3. Register Socket.io listeners
     socket.on('connect', () => {
       setConnectionError(false);
+      socket.emit('join', username);
     });
 
     socket.on('disconnect', () => {

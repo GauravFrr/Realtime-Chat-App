@@ -14,6 +14,12 @@ const handleSocketConnection = (io) => {
       if (!username) return;
       
       const cleanName = username.trim();
+      
+      // Prevent duplicate join events from firing twice for the same socket connection
+      if (onlineUsers[socket.id] === cleanName) {
+        return;
+      }
+      
       onlineUsers[socket.id] = cleanName;
       
       const logTime = new Date().toLocaleTimeString();
