@@ -4,13 +4,18 @@ import ChatWindow from './components/ChatWindow';
 import './App.css';
 
 function App() {
-  const [username, setUsername] = useState('');
+  // Read initial username from localStorage to persist sessions across page refreshes
+  const [username, setUsername] = useState(() => {
+    return localStorage.getItem('chat_username') || '';
+  });
 
   const handleJoin = (name) => {
+    localStorage.setItem('chat_username', name);
     setUsername(name);
   };
 
   const handleDisconnect = () => {
+    localStorage.removeItem('chat_username');
     setUsername('');
   };
 
