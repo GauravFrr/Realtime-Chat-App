@@ -1,0 +1,7 @@
+# Top-level gitignore for Vedaz chat app
+node_modules/
+dist/
+.env
+chat.db
+.DS_Store
+*.log

@@ -1,0 +1,13 @@
+/* Reset margins and set full screen width/height for layout centering */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  background-color: #12181f;
+}
+
