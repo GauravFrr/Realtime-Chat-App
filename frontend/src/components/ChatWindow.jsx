@@ -10,7 +10,7 @@ const ChatWindow = ({ username, onDisconnect }) => {
   const [typingUser, setTypingUser] = useState(null);
   const [connectionError, setConnectionError] = useState(false);
 
-  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'http://localhost:5000';
+  const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 'https://realtime-chat-app-0pgz.onrender.com';
 
   useEffect(() => {
     // 1. Fetch chat history via REST API
