@@ -31,6 +31,11 @@ initDb();
 // Map REST API routes
 app.use('/api/messages', messagesRouter);
 
+// Root health check to prevent "Cannot GET /" errors in browser demos
+app.get('/', (req, res) => {
+  res.send('Chat backend is running');
+});
+
 // Health check endpoint (useful for Render deployments)
 app.get('/health', (req, res) => {
   res.send('Server is healthy and running.');
