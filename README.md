@@ -58,11 +58,11 @@ Open your browser at the local address printed in the terminal (usually `http://
 ## Deploying the Backend to Render
 
 To deploy the backend to Render:
-1. Push your project code to your GitHub repository (e.g., `https://github.com/GauravFrr/OIBSIP.git`).
+1. Push your project code to your GitHub repository (e.g., `https://github.com/GauravFrr/Realtime-Chat-App.git`).
 2. Log in to the [Render Dashboard](https://dashboard.render.com/) and click **New > Web Service**.
 3. Link your GitHub repository.
 4. Set the following settings:
-   - **Name**: `vedaz-chat-backend`
+   - **Name**: `realtime-chat-app`
    - **Root Directory**: `backend`
    - **Runtime**: `Node`
    - **Build Command**: `npm install`
@@ -70,8 +70,8 @@ To deploy the backend to Render:
 5. In the **Environment** tab, add the environment variables:
    - `PORT` = `5000` (or leave empty to let Render assign)
    - `DB_PATH` = `/opt/render/project/src/chat.db` (to persist SQLite between deploys, use Render's persistent disk, or leave as default `chat.db` for transient deploys)
-   - `FRONTEND_URL` = `https://vedaz-chat-frontend.onrender.com` (your deployed React frontend URL)
+   - `FRONTEND_URL` = `http://localhost:5173` (or your deployed React frontend URL)
 
 ### Live API URL
 Once deployed, the live backend service is hosted at:
-**Live API URL**: [https://vedaz-chat-backend.onrender.com](https://vedaz-chat-backend.onrender.com)
+**Live API URL**: [https://realtime-chat-app-0pgz.onrender.com/](https://realtime-chat-app-0pgz.onrender.com/)
