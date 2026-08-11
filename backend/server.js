@@ -10,19 +10,16 @@ const handleSocketConnection = require('./socket/socketHandlers');
 const app = express();
 const server = http.createServer(app);
 
-// Configure CORS origin to support local dev and live URL
-const frontendUrl = process.env.FRONTEND_URL || 'http://localhost:5173';
+// Configure CORS origin to allow all connections (wildcard) for seamless deployment
 const io = socketIo(server, {
   cors: {
-    origin: [frontendUrl, 'http://localhost:5173'],
+    origin: '*',
     methods: ['GET', 'POST']
   }
 });
 
 // Middleware
-app.use(cors({
-  origin: [frontendUrl, 'http://localhost:5173']
-}));
+app.use(cors());
 app.use(express.json());
 
 // Initialize SQLite schema
