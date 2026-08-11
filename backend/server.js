@@ -45,5 +45,5 @@ handleSocketConnection(io);
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => {
   console.log(`Express server running on port ${PORT}`);
-  console.log(`CORS configured origin: ${frontendUrl}`);
+  console.log('CORS configured origin: * (wildcard)');
 });
