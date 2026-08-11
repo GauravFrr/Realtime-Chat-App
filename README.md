@@ -2,6 +2,12 @@
 
 This is a real-time web chat application featuring a React-based web frontend and a Node.js + Express + Socket.io + SQLite backend. Users can join the chat room by choosing a username and participate in a real-time group chat.
 
+## Deployed Links
+
+- **Frontend Application (Vercel)**: [https://realtime-chat-app-two-topaz.vercel.app/](https://realtime-chat-app-two-topaz.vercel.app/)
+- **Backend API Server (Render)**: [https://realtime-chat-app-0pgz.onrender.com/](https://realtime-chat-app-0pgz.onrender.com/)
+- **Google Drive Project Submission**: [Google Drive Folder](https://drive.google.com/drive/folders/17FFELZ8lLTxNuXj9vbIakgwCtJmw2uWo?usp=sharing)
+
 ## Architecture
 
 The project is structured into two separate main directories:
